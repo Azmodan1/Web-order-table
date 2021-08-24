@@ -1,28 +1,28 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssOptimizePlugin = require('optimize-css-assets-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const webpack = require('webpack');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssOptimizePlugin = require('optimize-css-assets-webpack-plugin')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const webpack = require('webpack')
 
-const DevMode = process.env.NODE_ENV === 'development';
+const DevMode = process.env.NODE_ENV === 'development'
 
-const ProdMode = !DevMode;
+const ProdMode = !DevMode
 
 const optimization = () => {
   config = {
     splitChunks: {
       chunks: 'all',
     },
-  };
-  if (ProdMode) {
-    config.minimizer = [new CssOptimizePlugin(), new TerserPlugin()];
   }
-  return config;
-};
+  if (ProdMode) {
+    config.minimizer = [new CssOptimizePlugin(), new TerserPlugin()]
+  }
+  return config
+}
 
 module.exports = {
   entry: {
@@ -34,10 +34,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.css', '.jsx', '.png'],
-    // alias: {
-    //   '@models': path.resolve(__dirname, 'src/models'),
-    //   '@': path.resolve(__dirname, 'src '),
-    // },
   },
   devServer: {
     hotOnly: true,
@@ -65,7 +61,6 @@ module.exports = {
   module: {
     rules: [
       { test: /\.xml$/, use: ['xml-loader'] },
-      { test: /\.svg$/, loader: 'svg-react-loader' },
       { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
       {
         test: /\.(js|jsx)$/,
@@ -77,4 +72,4 @@ module.exports = {
   },
 
   optimization: optimization(),
-};
+}
