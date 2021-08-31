@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 import Navbar from '../../ui/components/Navbar/Navbar'
@@ -6,31 +6,33 @@ import Table from '../../ui/components/Table/Table'
 // import actions from '../../modules/Orders/actions'
 
 const Main = () => {
-  const [value, setValue] = useState({
-    query: '',
-    base: useSelector(state => state.orders.orders),
+  const data = useSelector(state => state.orders.orders)
+
+  const [state, setState] = useState({
+    search: '',
+    data,
   })
-  const lowercasedFilter = value.query.toLowerCase()
-  const filteredData = value.base?.filter(order =>
-    order.name.toLowerCase().includes(lowercasedFilter),
-  )
-  const handleChange = e => setValue({ query: e.target.value })
 
-  // const searching = event => {
-  //   const keyword = event.target.value
-  //   setValue({ search: dataset.filter(order => order.name.toLowerCase().includes(keyword)) })
-  // }
-  // const dispatch = useDispatch()
-  // useEffect(
-  //   () => dataset.filter(order => order.name.toLowerCase().includes(value)),
+  const handleChange = e => setState(prevState => ({ ...prevState, search: e.target.value }))
 
-  //   [value, dataset],
-  // )
+  useEffect(() => {
+    if (state.search) {
+      const filteredData = data.filter(({ name, patronymic, surname, corporation }) =>
+        [name, patronymic, surname, corporation].some(item =>
+          item.toLowerCase().includes(state.search.toLowerCase()),
+        ),
+      )
+
+      setState(prevState => ({ ...prevState, data: filteredData }))
+    } else {
+      setState(prevState => ({ ...prevState, data }))
+    }
+  }, [data, state.search])
 
   return (
     <>
-      <Navbar value={value} handleChange={handleChange} />
-      <Table filteredData={filteredData} />
+      <Navbar value={state.search} handleChange={handleChange} />
+      <Table filteredData={state.data} />
     </>
   )
 }

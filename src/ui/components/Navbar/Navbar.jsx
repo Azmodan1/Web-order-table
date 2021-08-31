@@ -19,7 +19,7 @@ const Navbar = ({ value, handleChange }) => {
         height='40px'
         placeholder='Поиск заявки...'
       />
-      <Button onClick={() => push(routeNames.newOrd)}>Добавить заказ</Button>
+      <Button onClick={() => push(routeNames.newOrd)}>Добавить заявку</Button>
     </Wrapper>
   )
 }

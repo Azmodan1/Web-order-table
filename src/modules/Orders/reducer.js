@@ -1,4 +1,4 @@
-import { ADD_ORDER,  DELETE_ORDER } from './constans'
+import { ADD_ORDER, DELETE_ORDER } from './constans'
 
 const date = () =>
   `${new Date().getFullYear()}.0${
@@ -72,15 +72,6 @@ const OrdersReducer = (state = initialState, action) => {
         ...state,
         orders: [...state.orders, action.payload],
       }
-    // case SEARCH_ORDER:
-    //   return {
-    //     ...state,
-    //     orders: [
-    //       ...state.orders.filter(order =>
-    //         order.name.toLowerCase().includes(action.payload.toLowerCase()),
-    //       ),
-    //     ],
-    //   }
     case DELETE_ORDER:
       return {
         ...state,
