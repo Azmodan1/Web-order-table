@@ -21,5 +21,32 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'prettier'],
-  rules: {},
+  rules: {
+    'node/no-missing-import': [
+      'error',
+      {
+        allowModules: [],
+        resolvePaths: ['/path/to/a/modules/directory'],
+        tryExtensions: ['.js', '.json', '.node', '.jsx'],
+      },
+    ],
+    'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],
+    'jsx-a11y/label-has-associated-control': [
+      'off',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
+      },
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      'off',
+      {
+        components: ['Link'],
+        specialLink: ['to'],
+      },
+    ],
+
+    'no-console': 'off',
+  },
 }

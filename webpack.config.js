@@ -31,19 +31,20 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].[contenthash].js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.css', '.jsx', '.png'],
   },
   devServer: {
-    hotOnly: true,
+    // hotOnly: true,
     open: true,
     port: 8080,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
-      favicon: './src/images/Lesh.ico',
+      template: path.resolve(__dirname, './src/public/index.html'),
       filename: 'index.html',
       minify: {
         collapseWhitespace: ProdMode,
@@ -54,7 +55,7 @@ module.exports = {
     DevMode && new webpack.HotModuleReplacementPlugin(),
     DevMode && new ReactRefreshWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: ProdMode ? 'styles-[contenthash].css' : 'styles.css',
+      filename: ProdMode ? 'styles-[contenthash].css' : 'index.css',
       chunkFilename: '[id].css',
     }),
   ],
@@ -68,6 +69,11 @@ module.exports = {
         use: 'babel-loader',
       },
       { test: /\.(png|jpg|gif|ico)$/, use: ['file-loader'] },
+      {
+        test: /\.(woff|woff2|eot|ttf|)$/,
+        loader: 'file-loader',
+        options: { name: '[name].[ext]', outputPath: './src/ui/assets/fonts/' },
+      },
     ],
   },
 

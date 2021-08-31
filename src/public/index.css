@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: dimgray;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+td,
+th {
+  background: rgb(36, 34, 34);
+  padding: 30px;
+}
+
+span {
+  width: 400px;
+  color: red;
+  font-size: 15px;
+}
+
+h1 {
+  color: white;
+}
