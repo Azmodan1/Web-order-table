@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 
 import Navbar from '../../ui/components/Navbar/Navbar'
 import Table from '../../ui/components/Table/Table'
-// import actions from '../../modules/Orders/actions'
 
 const Main = () => {
   const data = useSelector(state => state.orders.orders)
