@@ -28,7 +28,6 @@ const Profile = () => {
     }
   }
 
-  console.log(privateOrder)
   const handleDelete = () => {
     dispatch(actions.deleteOrder(privateOrder[0].id))
     push('/')

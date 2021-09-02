@@ -6,7 +6,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(36, 34, 34);
+  background-color: rgb(53, 7, 7);
+  border: 3px solid rgb(209, 197, 197);
   border-radius: 10px;
   flex-direction: column;
 `
@@ -22,20 +23,22 @@ const ContainerComment = styled(Container)`
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  border-left: 10px solid grey;
+  border-left: 10px solid rgb(209, 197, 197);
 `
 
 const DataContainer = styled.div`
   padding: 20px;
   width: 700px;
-  color: grey;
+  color: orange;
+  font-weight: bold;
 `
 const DataName = styled.span`
-  color: white;
+  color: rgb(209, 197, 197);
   font-size: 30px;
+  font-weight: normal;
 `
 const Message = styled.span`
-  color: white;
+  color: rgb(209, 197, 197);
   font-size: 13;
 `
 

@@ -30,7 +30,7 @@ const Main = () => {
 
   return (
     <>
-      <Navbar value={state.search} handleChange={handleChange} />
+      <Navbar state={state.search} handleChange={handleChange} />
       <Table filteredData={state.data} />
     </>
   )

@@ -59,7 +59,7 @@ export const initialState = {
       name: 'Роберт',
       patronymic: 'Богданович',
       phoneNumber: '89527683412',
-      comments: [],
+      comments: [[{ id: 1 }]],
       ATICode: '76821',
     },
   ],

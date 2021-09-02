@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../../../public/index.css'
 import { InputControl, Wrapper } from '../../FormStyle/styled'
+import Button from '../../Button/styled'
 
 const ProfileForm = ({
   values,
@@ -74,9 +75,9 @@ const ProfileForm = ({
       />
     </label>
     {touched.phoneNumber && errors.phoneNumber && <span>{errors.phoneNumber}</span>}
-    <button disabled={!isValid && !dirty} onClick={handleSubmit} type='submit'>
+    <Button width='400px' disabled={!isValid && !dirty} onClick={handleSubmit} type='submit'>
       Создать заявку
-    </button>
+    </Button>
   </Wrapper>
 )
 

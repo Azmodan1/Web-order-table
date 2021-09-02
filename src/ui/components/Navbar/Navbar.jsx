@@ -7,13 +7,13 @@ import Button from '../../Button/styled'
 import Wrapper from './styled'
 import routeNames from '../../../core/routeNames'
 
-const Navbar = ({ value, handleChange }) => {
+const Navbar = ({ state, handleChange }) => {
   const { push } = useHistory()
 
   return (
     <Wrapper>
       <InputControl
-        value={value.query}
+        state={state}
         onChange={handleChange}
         width='700px'
         height='40px'
@@ -25,8 +25,7 @@ const Navbar = ({ value, handleChange }) => {
 }
 
 Navbar.propTypes = {
-  value: PropTypes.shape({ query: PropTypes.string, base: PropTypes.arrayOf(PropTypes.object) })
-    .isRequired,
+  state: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
 }
 

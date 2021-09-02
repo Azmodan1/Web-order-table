@@ -6,8 +6,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(36, 34, 34);
-  border-radius: 20px;
+  background-color: rgb(53, 7, 7);
+  border: 3px solid rgb(209, 197, 197);
+  border-radius: 10px;
   flex-direction: column;
 `
 

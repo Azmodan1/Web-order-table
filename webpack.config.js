@@ -68,7 +68,21 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
-      { test: /\.(png|jpg|gif|ico)$/, use: ['file-loader'] },
+      {
+        test: /\.(png|jpg|jpeg|gif|ico)$/,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true,
+              webp: {
+                enabled: true,
+              },
+            },
+          },
+        ],
+      },
       {
         test: /\.(woff|woff2|eot|ttf|)$/,
         loader: 'file-loader',

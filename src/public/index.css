@@ -1,18 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: dimgray;
-  color: white;
+  color: rgb(209, 197, 197);
 }
 
 * {
   box-sizing: border-box;
-}
-
-td,
-th {
-  background: rgb(36, 34, 34);
-  padding: 30px;
 }
 
 span {
@@ -21,6 +14,26 @@ span {
   font-size: 15px;
 }
 
-h1 {
-  color: white;
+td,
+th {
+  background: rgb(53, 7, 7);
+  padding: 30px;
 }
+
+th:first-child {
+  border-top-left-radius: 10px;
+}
+
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* rgb(53, 7, 7) */

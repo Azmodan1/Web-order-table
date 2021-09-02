@@ -15,7 +15,7 @@ const Order = ({ id, date, corporation, name, surname, patronymic, phoneNumber, 
       <td>
         <NavLink
           style={{
-            color: 'yellow',
+            color: 'rgb(209, 197, 197)',
           }}
           to={`/profile/${ATICode}`}
         >

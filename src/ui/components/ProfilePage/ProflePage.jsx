@@ -2,6 +2,7 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 
 import { DataContainer, DataName, Container } from './styled'
+import Button from '../../Button/styled'
 
 const ProflePage = ({ handleDelete, date, match, privateOrder }) => (
   <Container>
@@ -33,9 +34,9 @@ const ProflePage = ({ handleDelete, date, match, privateOrder }) => (
       Дата создания заявки:
       <DataName> &nbsp; {date()}</DataName>
     </DataContainer>
-    <button type='button' onClick={handleDelete}>
+    <Button type='button' onClick={handleDelete}>
       Удалить заявку
-    </button>
+    </Button>
   </Container>
 )
 

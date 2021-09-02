@@ -15,7 +15,7 @@ const InputControl = styled.input`
   padding: 8px;
   border: solid black;
   background-color: lightgrey;
-  border-radius: 4px;
+  border-radius: 10px;
   &:focus {
     outline: none;
     border-color: white;

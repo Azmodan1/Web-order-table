@@ -6,10 +6,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgb(36, 34, 34);
+  background: rgb(53, 7, 7);
   margin: 10px;
-  border: 3px solid;
-  border-radius: 5px;
+  border: 2px solid rgb(209, 197, 197);
+  border-radius: 20px;
 `
 
 export default Wrapper
