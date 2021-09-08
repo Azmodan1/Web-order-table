@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   background: #dca;
   margin: 10px;
   border: 3px solid black;
-  border-radius: 20px;
+  border-radius: 14px;
 `
 
 export default Wrapper

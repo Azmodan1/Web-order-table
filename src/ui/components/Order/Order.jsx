@@ -33,7 +33,7 @@ Order.propTypes = {
   name: PropTypes.string.isRequired,
   surname: PropTypes.string.isRequired,
   patronymic: PropTypes.string.isRequired,
-  phoneNumber: PropTypes.number.isRequired,
+  phoneNumber: PropTypes.string.isRequired,
   ATICode: PropTypes.string.isRequired,
 }
 export default Order

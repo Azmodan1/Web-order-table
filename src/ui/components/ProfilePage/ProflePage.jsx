@@ -44,6 +44,6 @@ ProflePage.propTypes = {
   handleDelete: PropTypes.func.isRequired,
   privateOrder: PropTypes.arrayOf(PropTypes.object).isRequired,
   date: PropTypes.func.isRequired,
-  match: PropTypes.oneOf([PropTypes.string, PropTypes.boolean]).isRequired,
+  match: PropTypes.shape([PropTypes.string, PropTypes.boolean]).isRequired,
 }
 export default ProflePage

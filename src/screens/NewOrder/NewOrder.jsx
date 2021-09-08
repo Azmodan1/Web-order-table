@@ -19,7 +19,7 @@ const NewOrder = () => {
 
   const getATI = (min, max) => String(Math.floor(Math.random() * (max - min + 1)) + min)
 
-  const Submiting = values => {
+  const submiting = values => {
     try {
       const order = {
         id: dataset.length + 1,
@@ -52,7 +52,7 @@ const NewOrder = () => {
           phoneNumber: '',
         }}
         validateOnChange
-        onSubmit={values => Submiting(values)}
+        onSubmit={values => submiting(values)}
         validationSchema={validationSchema}
       >
         {({ values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, dirty }) => (

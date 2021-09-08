@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background: rgb(36, 34, 34);
-  border-radius: 10px;
+  border-radius: 14px;
 `
 
 export default Wrapper
