@@ -6,9 +6,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgb(53, 7, 7);
+  background: #dca;
   margin: 10px;
-  border: 2px solid rgb(209, 197, 197);
+  border: 3px solid black;
   border-radius: 20px;
 `
 

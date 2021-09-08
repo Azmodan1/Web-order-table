@@ -15,7 +15,7 @@ const Order = ({ id, date, corporation, name, surname, patronymic, phoneNumber, 
       <td>
         <NavLink
           style={{
-            color: 'rgb(209, 197, 197)',
+            color: 'black',
           }}
           to={`/profile/${ATICode}`}
         >
@@ -33,7 +33,7 @@ Order.propTypes = {
   name: PropTypes.string.isRequired,
   surname: PropTypes.string.isRequired,
   patronymic: PropTypes.string.isRequired,
-  phoneNumber: PropTypes.string.isRequired,
+  phoneNumber: PropTypes.number.isRequired,
   ATICode: PropTypes.string.isRequired,
 }
 export default Order

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const Wrapper = styled.div`
-  background-color: transrdparent;
+  background-color: transparent;
   display: flex;
   align-items: center;
   flex-direction: column;

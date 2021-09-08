@@ -51,7 +51,7 @@ const NewOrder = () => {
           corporation: '',
           phoneNumber: '',
         }}
-        validateOnBlur
+        validateOnChange
         onSubmit={values => Submiting(values)}
         validationSchema={validationSchema}
       >

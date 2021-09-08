@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  color: rgb(209, 197, 197);
+  color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 * {
@@ -16,7 +18,7 @@ span {
 
 td,
 th {
-  background: rgb(53, 7, 7);
+  background: #dca;
   padding: 30px;
 }
 
